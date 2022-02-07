@@ -1,6 +1,6 @@
 
 export type Temp = {
-    date: string;
+    date: Date;
     temp: number;
   };
   

@@ -1,26 +1,28 @@
 import * as React from 'react';
-import { Text, View, StyleSheet,FlatList } from 'react-native';
-import { useRoute, useNavigation } from '@react-navigation/native';
+import { StyleSheet,FlatList } from 'react-native';
+import { useRoute } from '@react-navigation/native';
+import Flex from '../../components/Flex';
+import Header from '../../components/header/Header';
+import SimpleRow from '../../components/simpleRow/SimpleRow';
 
 interface DetailsScreenProps {}
 
 const DetailsScreen = (props: DetailsScreenProps) => {
   const { params } = useRoute();
   const renderItem = ({ item }) => (
-    <View>
-      <Text>{item.temp+ " -----  " +  item.date}</Text>
-    </View>
+    <SimpleRow title={item.temp}/>
   );
   return (
    
   
-    <View style={styles.container}>
+    <Flex style={styles.container}>
+      <Header header={params.title} ></Header>
       <FlatList
         data={params.data}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.title + Math.random().toString()}
       />
-    </View>
+    </Flex>
   );
 };
 

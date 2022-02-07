@@ -17,6 +17,7 @@ import {
 
 import { enableScreens } from 'react-native-screens';
 import Root from "./src/navigation/Root"
+import Colors from './src/styles/Colors';
 
 
 enableScreens();
@@ -24,7 +25,7 @@ enableScreens();
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: Colors.RedDamask,
   },
 });
 

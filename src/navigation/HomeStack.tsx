@@ -4,6 +4,7 @@ import MasterScreen from '../screens/master/MasterScreen';
 import DetailsScreen from '../screens/details/DetailsScreen';
 import { Screens } from "../consts/navigation"
 import { HomeStackParamList } from '../types/navigation';
+import  Colors  from '../styles/Colors';
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 
 const HomeStack: React.FC = () => {
