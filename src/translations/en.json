@@ -1,4 +1,6 @@
 {
-    "title": "Weather App"
+    "title": "Weather App",
+    "error-message-title": "No internet connection",
+    "error-message-body":"Please turn the internet connection  for fetching the data"
    
 }

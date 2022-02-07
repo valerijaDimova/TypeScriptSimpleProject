@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { FlatList, View, Text, TouchableOpacity } from 'react-native';
+import { FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
 import useMount from 'react-use/lib/useMount';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -62,7 +62,9 @@ const MasterScreen = (props: MasterScreenProps) => {
         getAvalibleCities(items)
         setWeather(items);
       })
-        .catch(error => console.error("Error: ", error))
+        .catch(error =>{
+          Alert.alert(t('error-message-title'),t('error-message-body'))
+        })
     })
     setRefreshing(false)
   }, [weather]);
