@@ -61,12 +61,3 @@ cd ios && pod install && cd ..
 react-native run-ios
 ```
 
-
-## User Stories
-
-- Home screen with all the cities that are available on the API. Estimation: 2h
-- Cities be sorted alphabetically. Estimation: 30m
-- Able to refresh the data that is on the home screen. Estimation: 30m
-- Able to click on a city and see the weather results on a separate screen. Estimation: 2h
-- Temperatures to be displayed in Celsius. Estimation: 30m
-- Temperatures to be displayed in chronological order. Estimation: 1h
